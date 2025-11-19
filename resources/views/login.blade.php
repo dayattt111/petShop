@@ -67,7 +67,7 @@
 
       {{-- <form method="post" action="/daftarAsdos"> --}}
 
-      <form method="post" action="/user">
+      <form method="post" action="/User">
         @csrf
 
         <div>

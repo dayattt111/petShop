@@ -22,6 +22,13 @@
             background-color: white;
         }
 
+        .header .navbar a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold; /* Menjaga agar link navbar tetap menonjol */
+        }
+
         .main-content {
             padding: 20px;
             display: flex;
@@ -56,13 +63,15 @@
 
     <header class="header">
         <div class="logo">
-            **Logo**
+            Logo
         </div>
         <nav class="navbar">
-            **Navbar**
+            <a style="background-color: teal ; padding:10px; color: white;" href="/User">Home</a>
+            <a style="background-color: rgb(0, 19, 128) ; padding:10px; color: white;" href="/User/pesananSaya">Pesanan Saya</a>
+            <a style="background-color: rgb(77, 128, 0) ; padding:10px; color: white;" href="/User/dataPemeriksaan">Data Pemeriksaan</a>
         </nav>
         <div class="profile">
-            **Profil**
+            Profil
         </div>
     </header>
 
@@ -70,35 +79,35 @@
         <div class="product-grid">
             
             <a href="/User/pesananSaya" class="product-card" style="background-color: #FFC0CB;">
-                **Produk**
+                Produk
             </a>
 
             <a href="/User/pesananSaya" class="product-card" style="background-color: #ADD8E6;">
-                **Produk**
+                Produk
             </a>
             
             <a href="/User/pesananSaya" class="product-card" style="background-color: #90EE90;">
-                **Produk**
+                Produk
             </a>
 
             <a href="/User/pesananSaya" class="product-card" style="background-color: #FFFF99;">
-                **Produk**
+                Produk
             </a>
 
             <a href="/User/pesananSaya" class="product-card" style="background-color: #FF7F50;">
-                **Produk**
+                Produk
             </a>
 
             <a href="/User/pesananSaya" class="product-card" style="background-color: #DDA0DD;">
-                **Produk**
+                Produk
             </a>
 
             <a href="/User/pesananSaya" class="product-card" style="background-color: #AFEEEE;">
-                **Produk**
+                Produk
             </a>
 
             <a href="/User/pesananSaya" class="product-card" style="background-color: #F08080;">
-                **Produk**
+                Produk
             </a>
 
         </div>
