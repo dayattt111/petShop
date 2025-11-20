@@ -90,10 +90,49 @@ class menuController extends Controller
         return view('dokter.KelolaJadwal.edit'); 
     }
 
-
 //InputHasilPemeriksaan
     public function InputHasilPemeriksaan(){
         return view('dokter.InputHasilPemeriksaan.index');
     }
 
+
+// Admin *
+    public function AdminIndex(){
+        return view('admin.index'); 
+    }
+
+// Admin KelolaDataProduk
+    public function KelolaDataProduk(){
+        return view('admin.KelolaDataProduk.index'); 
+    }
+//crud KelolaDataProduk
+    public function TambahKelolaDataProduk(){
+        return view('admin.KelolaDataProduk.tambah'); 
+    }
+    public function HapusKelolaDataProduk(){
+        return view('admin.KelolaDataProduk.hapus'); 
+    }
+    public function EditKelolaDataProduk(){
+        return view('admin.KelolaDataProduk.edit'); 
+    }
+
+// Admin KelolaLaporanPenjualan
+    public function KelolaLaporanPenjualan(){
+        return view('admin.KelolaLaporanPenjualan.index'); 
+    }
+
+// Admin KelolaLaporanLayanan
+    public function KelolaLaporanLayanan(){
+        return view('admin.KelolaLaporanLayanan.index'); 
+    }
+
+// Admin KelolaJadwalDokter
+    public function KelolaJadwalDokterAdmin(){
+        return view('admin.KelolaJadwalDokter.index');
+    }
+
+// Admin KelolaDataPengguna
+    public function KelolaDataPengguna(){
+        return view('admin.KelolaDataPengguna.index');
+    }  
 }

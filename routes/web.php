@@ -34,16 +34,16 @@ Route::post('/Kasir/KelolaTransaksiPelayanan', [menuController::class, 'KelolaTr
 Route::get('/Kasir/KelolaTransaksiPelayanan', [menuController::class, 'KelolaTransaksiPelayanan']);
 Route::post('/Kasir/KelolaTransaksiPelayanan', [menuController::class, 'KelolaTransaksiPelayanan']);
 
-//cetakStruk
+// CetakStruk
 Route::post('/Kasir/CetakStruk', [menuController::class, 'CetakStruk']);
 Route::get('/Kasir/CetakStruk', [menuController::class, 'CetakStruk']);
 Route::get('/Kasir/CetakStrukSelect', [menuController::class, 'CetakStrukSelect']);
 
-// Dokter
+// Dokter *
 Route::post('/Dokter', [menuController::class, 'DokterIndex']);
 Route::get('/Dokter', [menuController::class, 'DokterIndex']);
 
-//KelolaJadwalDokter
+// Dokter KelolaJadwalDokter
 Route::get('/Dokter/KelolaJadwal', [menuController::class, 'KelolaJadwalDokter']);
 Route::post('/Dokter/KelolaJadwal', [menuController::class, 'KelolaJadwalDokter']);
 Route::get('/Dokter/KelolaJadwal/tambah', [menuController::class, 'TambahKelolaJadwalDokter']);
@@ -53,5 +53,40 @@ Route::post('/Dokter/KelolaJadwal/hapus', [menuController::class, 'HapusKelolaJa
 Route::get('/Dokter/KelolaJadwal/edit', [menuController::class, 'EditKelolaJadwalDokter']);
 Route::post('/Dokter/KelolaJadwal/edit', [menuController::class, 'EditKelolaJadwalDokter']);
 
-//InputHasilPemeriksaan
+// Dokter InputHasilPemeriksaan
 Route::get('/Dokter/InputHasilPemeriksaan', [menuController::class, 'InputHasilPemeriksaan']);
+
+
+// Admin *
+Route::post('/Admin', [menuController::class, 'AdminIndex']);
+Route::get('/Admin', [menuController::class, 'AdminIndex']);
+
+// Admin KelolaDataProduk
+Route::post('/Admin/KelolaDataProduk', [menuController::class, 'KelolaDataProduk']);
+Route::get('/Admin/KelolaDataProduk', [menuController::class, 'KelolaDataProduk']);
+Route::post('/Admin/KelolaDataProduk/tambah', [menuController::class, 'TambahKelolaDataProduk']);
+Route::get('/Admin/KelolaDataProduk/tambah', [menuController::class, 'TambahKelolaDataProduk']);
+Route::post('/Admin/KelolaDataProduk/hapus', [menuController::class, 'HapusKelolaDataProduk']);
+Route::get('/Admin/KelolaDataProduk/hapus', [menuController::class, 'HapusKelolaDataProduk']);
+Route::post('/Admin/KelolaDataProduk/edit', [menuController::class, 'EditKelolaDataProduk']);
+Route::get('/Admin/KelolaDataProduk/edit', [menuController::class, 'EditKelolaDataProduk']);
+
+
+
+// Admin KelolaLaporanPenjualan
+Route::get('/Admin/KelolaLaporanPenjualan', [menuController::class, 'KelolaLaporanPenjualan']);
+
+
+
+// Admin KelolaLaporanLayanan
+Route::get('/Admin/KelolaLaporanDataLayananPerawatan', [menuController::class, 'KelolaLaporanLayanan']);
+
+
+
+// Admin KelolaJadwalDokter
+Route::get('/Admin/KelolaJadwalDokter', [menuController::class, 'KelolaJadwalDokterAdmin']);
+
+
+
+// Admin KelolaUser
+Route::get('/Admin/KelolaDataPengguna', [menuController::class, 'KelolaDataPengguna']);
