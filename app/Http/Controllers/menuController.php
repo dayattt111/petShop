@@ -131,7 +131,6 @@ class menuController extends Controller
         return view('admin.KelolaLaporanPenjualan.edit'); 
     }
 
-
 // Admin KelolaLaporanLayanan
     public function KelolaLaporanLayanan(){
         return view('admin.KelolaLaporanLayanan.index'); 
@@ -170,7 +169,7 @@ class menuController extends Controller
     public function KelolaDataPengguna(){
         return view('admin.KelolaDataPengguna.index');
     }
-    
+
 // crud KelolaDataPengguna
     public function TambahKelolaDataPengguna(){
         return view('admin.KelolaDataPengguna.tambah');

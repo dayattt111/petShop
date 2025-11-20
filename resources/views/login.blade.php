@@ -1,4 +1,3 @@
-<!-- resources/views/auth/login.blade.php -->
 <!doctype html>
 <html lang="id">
 <head>
@@ -6,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Login</title>
   <style>
-    /* Center both vertically & horizontally */
     html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
     .wrap {
       min-height:100vh;
@@ -25,10 +23,10 @@
       padding:28px;
       box-sizing:border-box;
     }
-    h1{margin:0 0 14px;font-size:20px;color:#111}
-    .desc{margin:0 0 18px;color:#666;font-size:14px}
+    h1{margin:0 0 14px;font-size:20px;color:#111;text-align:center}
+    .desc{margin:0 0 18px;color:#666;font-size:14px;text-align:center}
     label{display:block;font-size:13px;color:#333;margin-bottom:6px}
-    input[type="email"], input[type="password"]{
+    input, select {
       width:100%;
       padding:10px 12px;
       border:1px solid #d7dbe0;
@@ -37,8 +35,6 @@
       margin-bottom:12px;
       font-size:14px;
     }
-    .row {display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
-    .remember {display:flex;align-items:center;gap:8px;font-size:13px;color:#444}
     .btn {
       width:100%;
       padding:10px 12px;
@@ -50,7 +46,6 @@
       cursor:pointer;
       font-size:15px;
     }
-    .error {color:#b91c1c;font-size:13px;margin-bottom:12px;}
     .help {font-size:13px;color:#6b7280;text-align:center;margin-top:12px;}
     a.link{color:#2563eb;text-decoration:none;}
   </style>
@@ -58,37 +53,34 @@
 <body>
   <div class="wrap">
     <div class="card">
-      <center><h1>Login</h1></center>
-      <p class="desc">Silakan Login menggunakan email dan kata sandi Anda.</p>
+      <h1>Login</h1>
+      <p class="desc">Silakan pilih role lalu login menggunakan email dan kata sandi Anda.</p>
 
       {{-- User, Dosen, Admin, Kasir --}}
 
-      <form method="post" action="/Admin">
+      {{-- <form method="post" action="/Admin"> --}}
 
       {{-- <form method="post" action="/Dokter"> --}}
       
       {{-- <form method="post" action="/Kasir"> --}}
 
-      {{-- <form method="post" action="/User"> --}}
+      <form id="loginForm" method="POST" action="/Admin">
         @csrf
 
-        <div>
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" value="">
-        </div>
+        <!-- PILIH ROLE -->
+        <label for="role">Login sebagai:</label>
+        <select id="role" name="role">
+          <option value="Admin" selected>Admin</option>
+          <option value="Dokter">Dokter</option>
+          <option value="User">User</option>
+          <option value="Kasir">Kasir</option>
+        </select>
 
-        <div>
-          <label for="password">Kata Sandi</label>
-          <input id="password" type="password" name="password" >
-        </div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" >
 
-        {{-- <div class="row">
-          <label class="remember">
-            <input type="checkbox" name="remember" >
-            Ingat saya
-          </label>
-          <a class="link" href="">Lupa kata sandi?</a>
-        </div> --}}
+        <label for="password">Kata Sandi</label>
+        <input id="password" type="password" name="password" >
 
         <button class="btn" type="submit">Login</button>
       </form>
@@ -96,5 +88,17 @@
       <p class="help">Belum punya akun? <a class="link" href="/register">Register</a></p>
     </div>
   </div>
+
+  <script>
+    // Otomatis ubah action form sesuai role yang dipilih
+    const roleSelect = document.getElementById('role');
+    const form = document.getElementById('loginForm');
+
+    roleSelect.addEventListener('change', () => {
+      const role = roleSelect.value;
+      form.action = "/" + role; // Contoh: /Admin, /Dokter, /User, /Kasir
+    });
+  </script>
+
 </body>
 </html>

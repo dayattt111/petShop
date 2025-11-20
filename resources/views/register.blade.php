@@ -54,17 +54,12 @@
 
       {{-- <form method="post" action="/Admin"> --}}
 
-      <form method="post" action="/Dokter">
+      {{-- <form method="post" action="/Dokter"> --}}
       
       {{-- <form method="post" action="/Kasir"> --}}
 
-      {{-- <form method="post" action="/User"> --}}
+      <form method="post" action="/User">
         @csrf
-
-        <div class="mb-3">
-          <label for="name">Nim</label>
-          <input id="name" type="text" name="nim" class="form-control">
-        </div>
 
         <div class="mb-3">
           <label for="name">Nama Lengkap</label>
@@ -72,16 +67,9 @@
         </div>
 
         <div class="mb-3">
-          <label for="">No Hp</label>
-          <input id="" type="text" name="" class="form-control">
+          <label for="noHp">No Hp</label>
+          <input id="noHp" type="text" name="noHp" class="form-control">
         </div>
-
-        <div class="mb-3">
-          <label for="">Upload Foto <i>(ukuran 4*3)</i></label>
-          <input id="image" type="file" name="image" class="form-control" accept="image/*">
-
-        </div>
-
         
         <div class="mb-3">
           <label for="password">Kata Sandi</label>
