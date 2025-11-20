@@ -119,7 +119,7 @@
             <a style="background-color: rgb(77, 128, 0); color: white;" href="/User/dataPemeriksaan">Data Pemeriksaan</a>
         </nav>
 
-        <div class="profile">
+        <div class="profile" onclick="window.location='/'">
             <img src="https://i.pravatar.cc/100" alt="Profil">
         </div>
     </header>
