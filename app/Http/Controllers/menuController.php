@@ -148,10 +148,23 @@ class menuController extends Controller
         return view('admin.KelolaLaporanLayanan.edit'); 
     }
 
+
+
 // Admin KelolaJadwalDokter
     public function KelolaJadwalDokterAdmin(){
         return view('admin.KelolaJadwalDokter.index');
     }
+// crud KelolaJadwalDokter
+    public function AdminTambahKelolaJadwalDokter(){
+        return view('admin.KelolaJadwalDokter.tambah');
+    }
+    public function AdminHapusKelolaJadwalDokter(){
+        return view('admin.KelolaJadwalDokter.hapus');
+    }
+    public function AdminEditKelolaJadwalDokter(){
+        return view('admin.KelolaJadwalDokter.edit');
+    }
+
 
 // Admin KelolaDataPengguna
     public function KelolaDataPengguna(){

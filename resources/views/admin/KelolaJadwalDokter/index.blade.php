@@ -116,8 +116,8 @@
                             <td>Grooming</td>
                             <td style="color: green; font-weight: bold;">Selesai</td>
                             <td>
-                                <a href="/Admin/KelolaJadwalDokter/edit?id=1" class="action-btn edit">Edit</a>
-                                <a href="/Admin/KelolaJadwalDokter/hapus?id=1" class="action-btn delete">Hapus</a>
+                                <a href="/Admin/KelolaJadwalDokter/edit" class="action-btn edit">Edit</a>
+                                <a href="/Admin/KelolaJadwalDokter/hapus" class="action-btn delete">Hapus</a>
                             </td>
                         </tr>
                         <tr>
@@ -128,8 +128,8 @@
                             <td>Vaksinasi Rutin</td>
                             <td style="color: orange; font-weight: bold;">Proses</td>
                             <td>
-                                <a href="/Admin/KelolaJadwalDokter/edit?id=2" class="action-btn edit">Edit</a>
-                                <a href="/Admin/KelolaJadwalDokter/hapus?id=2" class="action-btn delete">Hapus</a>
+                                <a href="/Admin/KelolaJadwalDokter/edit" class="action-btn edit">Edit</a>
+                                <a href="/Admin/KelolaJadwalDokter/hapus" class="action-btn delete">Hapus</a>
                             </td>
                         </tr>
                         <tr>
@@ -140,8 +140,8 @@
                             <td>Kaki pincang</td>
                             <td style="color: blue; font-weight: bold;">Terjadwal</td>
                             <td>
-                                <a href="/Admin/KelolaJadwalDokter/edit?id=3" class="action-btn edit">Edit</a>
-                                <a href="/Admin/KelolaJadwalDokter/hapus?id=3" class="action-btn delete">Hapus</a>
+                                <a href="/Admin/KelolaJadwalDokter/edit" class="action-btn edit">Edit</a>
+                                <a href="/Admin/KelolaJadwalDokter/hapus" class="action-btn delete">Hapus</a>
                             </td>
                         </tr>
                     </tbody>
