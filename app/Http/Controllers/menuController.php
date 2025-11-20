@@ -120,6 +120,17 @@ class menuController extends Controller
     public function KelolaLaporanPenjualan(){
         return view('admin.KelolaLaporanPenjualan.index'); 
     }
+//crud KelolaLaporanPenjualan
+    public function TambahKelolaLaporanPenjualan(){
+        return view('admin.KelolaLaporanPenjualan.tambah'); 
+    }
+    public function HapusKelolaLaporanPenjualan(){
+        return view('admin.KelolaLaporanPenjualan.hapus'); 
+    }
+    public function EditKelolaLaporanPenjualan(){
+        return view('admin.KelolaLaporanPenjualan.edit'); 
+    }
+
 
 // Admin KelolaLaporanLayanan
     public function KelolaLaporanLayanan(){

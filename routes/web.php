@@ -71,11 +71,15 @@ Route::get('/Admin/KelolaDataProduk/hapus', [menuController::class, 'HapusKelola
 Route::post('/Admin/KelolaDataProduk/edit', [menuController::class, 'EditKelolaDataProduk']);
 Route::get('/Admin/KelolaDataProduk/edit', [menuController::class, 'EditKelolaDataProduk']);
 
-
-
 // Admin KelolaLaporanPenjualan
+Route::post('/Admin/KelolaLaporanPenjualan', [menuController::class, 'KelolaLaporanPenjualan']);
 Route::get('/Admin/KelolaLaporanPenjualan', [menuController::class, 'KelolaLaporanPenjualan']);
-
+Route::post('/Admin/KelolaLaporanPenjualan/tambah', [menuController::class, 'TambahKelolaLaporanPenjualan']);
+Route::get('/Admin/KelolaLaporanPenjualan/tambah', [menuController::class, 'TambahKelolaLaporanPenjualan']);
+Route::post('/Admin/KelolaLaporanPenjualan/hapus', [menuController::class, 'HapusKelolaLaporanPenjualan']);
+Route::get('/Admin/KelolaLaporanPenjualan/hapus', [menuController::class, 'HapusKelolaLaporanPenjualan']);
+Route::post('/Admin/KelolaLaporanPenjualan/edit', [menuController::class, 'EditKelolaLaporanPenjualan']);
+Route::get('/Admin/KelolaLaporanPenjualan/edit', [menuController::class, 'EditKelolaLaporanPenjualan']);
 
 
 // Admin KelolaLaporanLayanan

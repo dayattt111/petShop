@@ -50,9 +50,14 @@
             color: #1abc9c;
         }
 
-        /* Search Bar (sesuai wireframe) */
+        /* Search Bar & CRUD Button */
+        .header-controls { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 15px;
+        }
         .search-bar { 
-            margin-bottom: 15px; 
             display: flex; 
             align-items: center;
         }
@@ -66,6 +71,8 @@
             border-radius: 4px;
             width: 300px;
         }
+        .crud-buttons a { text-decoration: none; padding: 8px 15px; margin-right: 10px; border-radius: 4px; color: white; font-weight: bold; }
+        #add { background-color: #28a745; } /* Warna Tambah */
 
         /* Tabel Styling */
         .data-table { width: 100%; border-collapse: collapse; border: 1px solid black; background-color: white; }
@@ -75,8 +82,10 @@
         .data-table td:last-child { text-align: center; } 
         
         /* Aksi Buttons di dalam Tabel */
-        .action-btn { padding: 5px 10px; margin: 0 3px; border-radius: 4px; text-decoration: none; color: white; font-size: 12px; }
+        .action-btn { padding: 5px 10px; margin: 0 3px; border-radius: 4px; text-decoration: none; color: white; font-size: 12px; display: inline-block; }
         .action-btn.detail { background-color: #007bff; }
+        .action-btn.edit { background-color: #ffc107; color: black; } 
+        .action-btn.delete { background-color: #dc3545; } 
     </style>
 </head>
 <body>
@@ -117,9 +126,14 @@
                     </div>
                 </div>
 
-                <div class="search-bar">
-                    <label for="search-penjualan">Penjualan:</label>
-                    <input type="text" id="search-penjualan" placeholder="Cari ID Transaksi...">
+                <div class="header-controls">
+                    <div class="search-bar">
+                        <label for="search-penjualan">Cari ID Transaksi:</label>
+                        <input type="text" id="search-penjualan" placeholder="Cari ID Transaksi...">
+                    </div>
+                    <div class="crud-buttons">
+                        <a href="/Admin/KelolaLaporanPenjualan/tambah" id="add">➕ Tambah Transaksi (Create)</a>
+                    </div>
                 </div>
 
                 <table class="data-table">
@@ -139,7 +153,9 @@
                             <td>Rp 315.000</td>
                             <td>Tunai</td>
                             <td>
-                                <a href="/Admin/KelolaLaporanPenjualan/detail?id=TRX-001" class="action-btn detail">Detail</a>
+                                {{-- <a href="/Admin/KelolaLaporanPenjualan/detail" class="action-btn detail">Detail</a> --}}
+                                <a href="/Admin/KelolaLaporanPenjualan/edit" class="action-btn edit">Edit</a>
+                                <a href="/Admin/KelolaLaporanPenjualan/hapus" class="action-btn delete">Hapus</a>
                             </td>
                         </tr>
                         <tr>
@@ -148,7 +164,9 @@
                             <td>Rp 500.000</td>
                             <td>QRIS</td>
                             <td>
-                                <a href="/Admin/KelolaLaporanPenjualan/detail?id=TRX-002" class="action-btn detail">Detail</a>
+                                {{-- <a href="/Admin/KelolaLaporanPenjualan/detail" class="action-btn detail">Detail</a> --}}
+                                <a href="/Admin/KelolaLaporanPenjualan/edit" class="action-btn edit">Edit</a>
+                                <a href="/Admin/KelolaLaporanPenjualan/hapus" class="action-btn delete">Hapus</a>
                             </td>
                         </tr>
                         <tr>
@@ -157,7 +175,9 @@
                             <td>Rp 120.000</td>
                             <td>Tunai</td>
                             <td>
-                                <a href="/Admin/KelolaLaporanPenjualan/detail?id=TRX-003" class="action-btn detail">Detail</a>
+                                {{-- <a href="/Admin/KelolaLaporanPenjualan/detail" class="action-btn detail">Detail</a> --}}
+                                <a href="/Admin/KelolaLaporanPenjualan/edit?id=TRX-003" class="action-btn edit">Edit</a>
+                                <a href="/Admin/KelolaLaporanPenjualan/hapus?id=TRX-003" class="action-btn delete">Hapus</a>
                             </td>
                         </tr>
                     </tbody>
