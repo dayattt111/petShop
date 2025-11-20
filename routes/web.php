@@ -83,8 +83,14 @@ Route::get('/Admin/KelolaLaporanPenjualan/edit', [menuController::class, 'EditKe
 
 
 // Admin KelolaLaporanLayanan
+Route::post('/Admin/KelolaLaporanDataLayananPerawatan', [menuController::class, 'KelolaLaporanLayanan']);
 Route::get('/Admin/KelolaLaporanDataLayananPerawatan', [menuController::class, 'KelolaLaporanLayanan']);
-
+Route::post('/Admin/KelolaLaporanDataLayananPerawatan/tambah', [menuController::class, 'TambahKelolaLaporanLayanan']);
+Route::get('/Admin/KelolaLaporanDataLayananPerawatan/tambah', [menuController::class, 'TambahKelolaLaporanLayanan']);
+Route::post('/Admin/KelolaLaporanDataLayananPerawatan/hapus', [menuController::class, 'HapusKelolaLaporanLayanan']);
+Route::get('/Admin/KelolaLaporanDataLayananPerawatan/hapus', [menuController::class, 'HapusKelolaLaporanLayanan']);
+Route::post('/Admin/KelolaLaporanDataLayananPerawatan/edit', [menuController::class, 'EditKelolaLaporanLayanan']);
+Route::get('/Admin/KelolaLaporanDataLayananPerawatan/edit', [menuController::class, 'EditKelolaLaporanLayanan']);
 
 
 // Admin KelolaJadwalDokter

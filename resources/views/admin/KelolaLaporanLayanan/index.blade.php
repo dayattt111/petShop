@@ -142,8 +142,8 @@
                             <td>Rp 120.000</td>
                             <td>Dr. Budi</td>
                             <td>
-                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/edit?id=LYN-001" class="action-btn edit">Edit</a>
-                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/hapus?id=LYN-001" class="action-btn delete">Hapus</a>
+                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/edit" class="action-btn edit">Edit</a>
+                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/hapus" class="action-btn delete">Hapus</a>
                             </td>
                         </tr>
                         <tr>
@@ -152,8 +152,8 @@
                             <td>Rp 150.000</td>
                             <td>Dr. Citra</td>
                             <td>
-                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/edit?id=LYN-002" class="action-btn edit">Edit</a>
-                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/hapus?id=LYN-002" class="action-btn delete">Hapus</a>
+                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/edit" class="action-btn edit">Edit</a>
+                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/hapus" class="action-btn delete">Hapus</a>
                             </td>
                         </tr>
                         <tr>
@@ -162,8 +162,8 @@
                             <td>Rp 80.000</td>
                             <td>Dr. Budi</td>
                             <td>
-                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/edit?id=LYN-003" class="action-btn edit">Edit</a>
-                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/hapus?id=LYN-003" class="action-btn delete">Hapus</a>
+                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/edit" class="action-btn edit">Edit</a>
+                                <a href="/Admin/KelolaLaporanDataLayananPerawatan/hapus" class="action-btn delete">Hapus</a>
                             </td>
                         </tr>
                     </tbody>
