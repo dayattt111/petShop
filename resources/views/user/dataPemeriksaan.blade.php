@@ -3,156 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Pemeriksaan - PetShop</title>
+    <title>Wireframe Produk</title>
+
     <style>
-        /* Gaya dasar untuk meniru tata letak wireframe */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f3f5f7;
         }
 
+        /* HEADER */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            border-bottom: 1px solid black; /* Garis pembatas header */
-            background-color: white;
+            padding: 12px 25px;
+            border-bottom: 1px solid #dcdcdc;
+            background: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
 
-        .main-content {
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #2563eb;
+            letter-spacing: 0.5px;
         }
 
-        .page-title {
-            text-align: center;
-            font-size: 24px;
-            margin: 20px 0 40px 0;
-            text-transform: uppercase;
-        }
-
-        .back-button {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 10px 15px;
-            background-color: #333;
-            color: white;
+        .navbar a {
+            margin: 0 8px;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            font-size: 14px;
+            padding: 10px 14px;
+            border-radius: 6px;
+            transition: 0.2s;
         }
 
-        .back-button:hover {
-            background-color: #555;
+        .navbar a:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .data-table {
+        /* PROFILE ICON */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            transition: 0.2s;
+        }
+
+        .profile img:hover {
+            border-color: #2563eb;
+            transform: scale(1.05);
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            margin-top: 150px;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* TABLE STYLE */
+        .table-wrapper {
+            width: 100%;
+            max-width: 1180px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+        }
+
+        table {
             width: 100%;
             border-collapse: collapse;
-            border: 1px solid black; /* Border luar sesuai wireframe */
-            background-color: white;
+            font-size: 15px;
         }
 
-        .data-table th, .data-table td {
-            border-bottom: 1px solid black; /* Garis pemisah baris */
+        table thead {
+            background: #2563eb;
+            color: white;
+        }
+
+        table th, table td {
             padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
             text-align: left;
         }
 
-        .data-table th {
-            background-color: #e0e0e0; /* Warna untuk header tabel */
-            font-weight: bold;
-            border-bottom: 2px solid black; /* Garis yang lebih tebal di bawah header */
-        }
-        
-        /* Memberi warna berbeda pada baris data untuk visualisasi */
-        .data-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        /* Styling untuk baris yang bisa diklik (seperti link) */
-        .data-table tr:not(:first-child):hover {
-            background-color: #fffacd; /* Warna cerah saat di-hover */
-            cursor: pointer;
+        table tr:hover {
+            background-color: #f6faff;
         }
     </style>
+
 </head>
 <body>
 
     <header class="header">
-        <div class="logo">
-            Logo
-        </div>
+        <div class="logo">XPetShop</div>
+
         <nav class="navbar">
-            <a style="background-color: teal ; padding:10px; color: white;" href="/User">Home</a>
-            <a style="background-color: rgb(0, 19, 128) ; padding:10px; color: white;" href="/User/pesananSaya">Pesanan Saya</a>
-            <a style="background-color: rgb(77, 128, 0) ; padding:10px; color: white;" href="/User/dataPemeriksaan">Data Pemeriksaan</a>
+            <a style="background-color: teal; color: white;" href="/User">Home</a>
+            <a style="background-color: rgb(0, 19, 128); color: white;" href="/User/pesananSaya">Pesanan Saya</a>
+            <a style="background-color: rgb(77, 128, 0); color: white;" href="/User/dataPemeriksaan">Data Pemeriksaan</a>
         </nav>
+
         <div class="profile">
-            Profil
+            <img src="https://i.pravatar.cc/100" alt="Profil">
         </div>
     </header>
 
     <div class="main-content">
-        
-        <a href="/User" class="back-button">
-            **← Kembali ke Beranda**
-        </a>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Produk</th>
+                        <th>Kategori</th>
+                        <th>Harga</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
 
-        <h1 class="page-title">
-            Data pemeriksaan
-        </h1>
-
-        <table class="data-table">
-            
-            <thead>
-                <tr>
-                    <th>**#**</th>
-                    <th>**Nama Hewan**</th>
-                    <th>**Tanggal Cek**</th>
-                    <th>**Keluhan Utama**</th>
-                    <th>**Hasil Singkat**</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                <tr style="background-color: #E6E6FA;">
-                    <td>1</td>
-                    <td>Miaw (Kucing)</td>
-                    <td>20/11/2025</td>
-                    <td>Batuk dan lemas</td>
-                    <td>Perlu Vitamin (Ringan)</td>
-                </tr>
-
-                <tr style="background-color: #F0FFF0;">
-                    <td>2</td>
-                    <td>Buddy (Anjing)</td>
-                    <td>15/11/2025</td>
-                    <td>Ruam kulit parah</td>
-                    <td>Alergi Makanan (Sedang)</td>
-                </tr>
-                
-                <tr style="background-color: #FFF0F5;">
-                    <td>3</td>
-                    <td>Lola (Kelinci)</td>
-                    <td>01/11/2025</td>
-                    <td>Gigi terlalu panjang</td>
-                    <td>Perlu Pemotongan Gigi</td>
-                </tr>
-                
-                <tr style="background-color: #FFFACD;">
-                    <td>4</td>
-                    <td>Kenari (Burung)</td>
-                    <td>25/10/2025</td>
-                    <td>Tidak mau makan</td>
-                    <td>Infeksi Ringan</td>
-                </tr>
-            </tbody>
-        </table>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Makanan Kucing Premium</td>
+                        <td>Makanan</td>
+                        <td>Rp 45.000</td>
+                        <td>Tersedia</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Shampoo Anjing</td>
+                        <td>Perawatan</td>
+                        <td>Rp 30.000</td>
+                        <td>Tersedia</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Kandang Besi 120cm</td>
+                        <td>Aksesoris</td>
+                        <td>Rp 350.000</td>
+                        <td>Habis</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Vitamin Hewan</td>
+                        <td>Kesehatan</td>
+                        <td>Rp 20.000</td>
+                        <td>Tersedia</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>
