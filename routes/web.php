@@ -104,5 +104,12 @@ Route::post('/Admin/KelolaJadwalDokter/edit', [menuController::class, 'AdminEdit
 Route::get('/Admin/KelolaJadwalDokter/edit', [menuController::class, 'AdminEditKelolaJadwalDokter']);
 
 
-// Admin KelolaUser
+// Admin KelolaDataPengguna
+Route::post('/Admin/KelolaDataPengguna', [menuController::class, 'KelolaDataPengguna']);
 Route::get('/Admin/KelolaDataPengguna', [menuController::class, 'KelolaDataPengguna']);
+Route::post('/Admin/KelolaDataPengguna/tambah', [menuController::class, 'TambahKelolaDataPengguna']);
+Route::get('/Admin/KelolaDataPengguna/tambah', [menuController::class, 'TambahKelolaDataPengguna']);
+Route::post('/Admin/KelolaDataPengguna/hapus', [menuController::class, 'HapusKelolaDataPengguna']);
+Route:: get('/Admin/KelolaDataPengguna/hapus', [menuController::class, 'HapusKelolaDataPengguna']);
+Route::post('/Admin/KelolaDataPengguna/edit', [menuController::class, 'EditKelolaDataPengguna']);
+Route::get('/Admin/KelolaDataPengguna/edit', [menuController::class, 'EditKelolaDataPengguna']);

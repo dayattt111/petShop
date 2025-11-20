@@ -169,5 +169,16 @@ class menuController extends Controller
 // Admin KelolaDataPengguna
     public function KelolaDataPengguna(){
         return view('admin.KelolaDataPengguna.index');
+    }
+    
+// crud KelolaDataPengguna
+    public function TambahKelolaDataPengguna(){
+        return view('admin.KelolaDataPengguna.tambah');
+    }
+    public function HapusKelolaDataPengguna(){
+        return view('admin.KelolaDataPengguna.hapus');
+    }
+    public function EditKelolaDataPengguna(){
+        return view('admin.KelolaDataPengguna.edit');
     }  
 }
