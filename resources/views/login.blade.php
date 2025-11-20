@@ -61,13 +61,15 @@
       <center><h1>Login</h1></center>
       <p class="desc">Silakan Login menggunakan email dan kata sandi Anda.</p>
 
-      {{-- Mahasiswa, Dosen, Admin --}}
+      {{-- User, Dosen, Admin, Kasir --}}
 
-      {{-- <form method="post" action="/jadwalMhs"> --}}
+      {{-- <form method="post" action="/Admin"> --}}
 
-      {{-- <form method="post" action="/daftarAsdos"> --}}
+      {{-- <form method="post" action="/Dokter"> --}}
+      
+      <form method="post" action="/Kasir">
 
-      <form method="post" action="/User">
+      {{-- <form method="post" action="/User"> --}}
         @csrf
 
         <div>

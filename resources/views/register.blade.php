@@ -50,9 +50,15 @@
       <center><h1>Register</h1></center>
       <p class="desc">Silakan buat akun baru untuk melanjutkan.</p>
 
-      {{-- <form method="POST" action="/jadwalMhs"> --}}
-      {{-- <form method="POST" action="/daftarAsdos"> --}}
-      <form method="POST" action="/adminAsdos">
+      {{-- User, Dosen, Admin, Kasir --}}
+
+      {{-- <form method="post" action="/Admin"> --}}
+
+      {{-- <form method="post" action="/Dokter"> --}}
+      
+      <form method="post" action="/Kasir">
+
+      {{-- <form method="post" action="/User"> --}}
         @csrf
 
         <div class="mb-3">
