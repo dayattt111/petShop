@@ -54,9 +54,9 @@
 
       {{-- <form method="post" action="/Admin"> --}}
 
-      {{-- <form method="post" action="/Dokter"> --}}
+      <form method="post" action="/Dokter">
       
-      <form method="post" action="/Kasir">
+      {{-- <form method="post" action="/Kasir"> --}}
 
       {{-- <form method="post" action="/User"> --}}
         @csrf

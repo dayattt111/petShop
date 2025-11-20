@@ -3,10 +3,6 @@
 use App\Http\Controllers\menuController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', [menuController::class, 'index']);
 Route::get('/register', [menuController::class, 'register']);
 Route::post('/logout', [menuController::class, 'logout']);
@@ -42,3 +38,20 @@ Route::post('/Kasir/KelolaTransaksiPelayanan', [menuController::class, 'KelolaTr
 Route::post('/Kasir/CetakStruk', [menuController::class, 'CetakStruk']);
 Route::get('/Kasir/CetakStruk', [menuController::class, 'CetakStruk']);
 Route::get('/Kasir/CetakStrukSelect', [menuController::class, 'CetakStrukSelect']);
+
+// Dokter
+Route::post('/Dokter', [menuController::class, 'DokterIndex']);
+Route::get('/Dokter', [menuController::class, 'DokterIndex']);
+
+//KelolaJadwalDokter
+Route::get('/Dokter/KelolaJadwal', [menuController::class, 'KelolaJadwalDokter']);
+Route::post('/Dokter/KelolaJadwal', [menuController::class, 'KelolaJadwalDokter']);
+Route::get('/Dokter/KelolaJadwal/tambah', [menuController::class, 'TambahKelolaJadwalDokter']);
+Route::post('/Dokter/KelolaJadwal/tambah', [menuController::class, 'TambahKelolaJadwalDokter']);
+Route::get('/Dokter/KelolaJadwal/hapus', [menuController::class, 'HapusKelolaJadwalDokter']);
+Route::post('/Dokter/KelolaJadwal/hapus', [menuController::class, 'HapusKelolaJadwalDokter']);
+Route::get('/Dokter/KelolaJadwal/edit', [menuController::class, 'EditKelolaJadwalDokter']);
+Route::post('/Dokter/KelolaJadwal/edit', [menuController::class, 'EditKelolaJadwalDokter']);
+
+//InputHasilPemeriksaan
+Route::get('/Dokter/InputHasilPemeriksaan', [menuController::class, 'InputHasilPemeriksaan']);

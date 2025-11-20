@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class menuController extends Controller
 {
-// login & register
+// login & register *
     public function index(){
         return view('login');
     }
@@ -17,7 +17,7 @@ class menuController extends Controller
         return view('/');
     }
 
-//user
+//user *
     public function userIndex(){
         return view('user.index');
     }
@@ -28,7 +28,7 @@ class menuController extends Controller
         return view('user.dataPemeriksaan');
     }
  
-//kasir
+//kasir *
     public function kasirIndex(){
         return view('kasir.index');
 //penjualanKair
@@ -69,4 +69,31 @@ class menuController extends Controller
     public function CetakStrukSelect(){
         return view('kasir.CetakStruk');
     }
+
+// Dokter *
+    public function DokterIndex(){
+        return view('dokter.index'); 
+    }
+
+//KelolaJadwalDokter
+    public function KelolaJadwalDokter(){
+        return view('dokter.KelolaJadwal.index'); 
+    }
+//crud KelolaJadwalDokter
+    public function TambahKelolaJadwalDokter(){
+        return view('dokter.KelolaJadwal.tambah'); 
+    }
+    public function HapusKelolaJadwalDokter(){
+        return view('dokter.KelolaJadwal.hapus'); 
+    }
+    public function EditKelolaJadwalDokter(){
+        return view('dokter.KelolaJadwal.edit'); 
+    }
+
+
+//InputHasilPemeriksaan
+    public function InputHasilPemeriksaan(){
+        return view('dokter.InputHasilPemeriksaan.index');
+    }
+
 }
